@@ -1,4 +1,20 @@
-{% for post in postslist | reverse %}
+---
+layout: layouts/base.njk
+title: Posts tagged as
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
+{% include "components/ui/headline.njk" %}
+<div class="flex flex-col items-center">
+  <p class="mt-4 font-semibold text-3xl uppercase">{{ tag }}</p>
+</div>
+
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
 
 <div class="flex bg-white shadow-lg rounded-lg mx-4 md:mx-auto my-10 max-w-md md:max-w-2xl "><!--horizontal margin is just for display-->
   <div class="flex items-start px-4 py-6">

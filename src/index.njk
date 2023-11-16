@@ -1,18 +1,14 @@
 ---
 title: Home
 layout: layouts/base.njk
+permalink: /
 eleventyNavigation:
   key: Home
   order: 0
 ---
-
-<div class="space-y-8">
-
-  <div>
-    <p>This is the project's home page. There is a little styling for demonstration purposes only.</p>
-    <p>The navigation might as well be a sidebar, or a floating menu. This template provides the structure, make it yours ✌️</p>
-  </div>
-
-
-  <a href="https://github.com/tomreinert/minimal-11ty-tailwind-starter" class="inline-block uppercase rounded bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white text-sm">Download on github</a>
-</div>
+  <section id="hero">{% include "./_includes/components/sections/hero.njk" %}</section>
+  <section id="servicesOffered">{% include "./_includes/components/sections/servicesOffered.njk" %}</section>
+  <section id="brands">{% include "./_includes/components/sections/brands.njk" %}</section>
+  <section id="testimonials">{% include "./_includes/components/sections/testimonials.njk" %}</section>
+  <section id="contact">{% include "./_includes/components/sections/contact.njk" %}</section>
+  <section id="ctaDiscovery">{% include "./_includes/components/sections/ctaDiscovery.njk" %}</section>
